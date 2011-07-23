@@ -30,19 +30,19 @@ NS_STDEXT_BEGIN
 
 namespace detail
 {
-	template <class Type, int nInst>
+	template <class Type, class nInst>
 	struct GlobalVar
 	{
 		static Type g_var;
 	};
 
-	template <class Type, int nInst>
+	template <class Type, class nInst>
 	Type GlobalVar<Type, nInst>::g_var;
 }
 
 // -------------------------------------------------------------------------
 
-#define WINX_DETAIL_GIDX_TLS_MUTEX_	0	// see <stdext/thread/TLS.h>
+#define WINX_DETAIL_GIDX_TLS_MUTEX_	int	// see <stdext/thread/TLS.h>
 
 // -------------------------------------------------------------------------
 
